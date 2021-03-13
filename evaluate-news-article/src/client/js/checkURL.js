@@ -1,4 +1,14 @@
 // TODO declare a function to check the url ..
+function chekUrl(str){
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return pattern.test(str);
+}
+
 //  The question now how can i do it. I understand you are very busy mate so here's some hints pick the one you like
 /* HINTS
     1. https://gist.github.com/franciskim/41a959f8e3989254ef5d
